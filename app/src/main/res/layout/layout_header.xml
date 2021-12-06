@@ -19,6 +19,7 @@
             app:srcCompat="@drawable/icon_back" />
 
         <TextView
+            android:id="@+id/textViewTitle"
             android:text="Epsi"
             android:textColor="@color/white"
             android:textSize="30sp"

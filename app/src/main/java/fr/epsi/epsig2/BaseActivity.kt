@@ -2,6 +2,7 @@ package fr.epsi.epsig2
 
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 open class BaseActivity : AppCompatActivity() {
@@ -12,6 +13,11 @@ open class BaseActivity : AppCompatActivity() {
         imageViewBack.setOnClickListener(View.OnClickListener {
             finish()
         })
+    }
+
+    fun setHeaderTitle(txt : String){
+        val textViewTitle = findViewById<TextView>(R.id.textViewTitle)
+        textViewTitle.text = txt
     }
 
 }

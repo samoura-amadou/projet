@@ -11,13 +11,23 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView:TextView = findViewById(R.id.textViewTitle)
-        val button:Button = findViewById(R.id.buttonHome)
+        val buttonNature:Button = findViewById(R.id.buttonNature)
+        val buttonSpace:Button = findViewById(R.id.buttonSpace)
 
-        button.setOnClickListener(View.OnClickListener {
-            textView.setText("Epsi")
+        buttonNature.setOnClickListener(View.OnClickListener {
             val newIntent= Intent(application,DetailActivity::class.java)
+            newIntent.putExtra("title",getString(R.string.txt_home_nature))
+            newIntent.putExtra("urlImage","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROFiHOkKUHVBF3TcyU1NgawBlIV9mIoSGAuA&usqp=CAU")
+            startActivity(newIntent)
+        })
+
+        buttonSpace.setOnClickListener(View.OnClickListener {
+            val newIntent= Intent(application,DetailActivity::class.java)
+            newIntent.putExtra("title",getString(R.string.txt_home_space))
+            newIntent.putExtra("urlImage","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkZFu63Vi0djeAwcj0d7aaEgBsS1eHpGLbw&usqp=CAU")
             startActivity(newIntent)
         })
     }
+
+
 }
