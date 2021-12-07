@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
@@ -17,6 +18,7 @@ class StudentAdapter (private val students: ArrayList<Student>): RecyclerView.Ad
         val textViewZipcode = view.findViewById<TextView>(R.id.textViewZipcode)
         val textViewCity = view.findViewById<TextView>(R.id.textViewCity)
         val imageViewStudent = view.findViewById<ImageView>(R.id.imageViewStudent)
+        val contentLayout = view.findViewById<LinearLayout>(R.id.contentLayout)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -33,6 +35,9 @@ class StudentAdapter (private val students: ArrayList<Student>): RecyclerView.Ad
         holder.textViewZipcode.text=student.zipcode
 
         Picasso.get().load(student.imgUrl).into(holder.imageViewStudent)
+        holder.contentLayout.setOnClickListener(View.OnClickListener {
+            (holder.contentLayout.context.applicationContext as AppEpsi).showToast(student.name)
+        })
     }
 
     override fun getItemCount(): Int {

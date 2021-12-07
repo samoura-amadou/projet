@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
+        android:id="@+id/contentLayout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="200dp">
@@ -32,10 +33,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    style="@style/TextViewEpsiList"
                     android:id="@+id/textViewCity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_weight="1"/>
                 <TextView
                     android:id="@+id/textViewZipcode"
