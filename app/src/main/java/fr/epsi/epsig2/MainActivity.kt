@@ -12,6 +12,8 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         val buttonNature:Button = findViewById(R.id.buttonNature)
         val buttonSpace:Button = findViewById(R.id.buttonSpace)
+        val buttonLogin:Button = findViewById(R.id.buttonLogin)
+
         (application as AppEpsi).showToast("Hello Epsi")
 
         buttonNature.setOnClickListener(View.OnClickListener {
@@ -25,6 +27,11 @@ class MainActivity : BaseActivity() {
             val newIntent= Intent(application,DetailActivity::class.java)
             newIntent.putExtra("title",getString(R.string.txt_home_space))
             newIntent.putExtra("urlImage","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkZFu63Vi0djeAwcj0d7aaEgBsS1eHpGLbw&usqp=CAU")
+            startActivity(newIntent)
+        })
+
+        buttonLogin.setOnClickListener(View.OnClickListener {
+            val newIntent= Intent(application,LoginActivity::class.java)
             startActivity(newIntent)
         })
     }

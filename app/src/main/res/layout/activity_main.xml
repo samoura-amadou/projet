@@ -30,6 +30,12 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/txt_home_space" />
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/txt_home_login" />
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
