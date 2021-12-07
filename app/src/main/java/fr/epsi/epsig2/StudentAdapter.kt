@@ -13,6 +13,9 @@ class StudentAdapter (private val students: ArrayList<Student>): RecyclerView.Ad
     class ViewHolder (view: View) : RecyclerView.ViewHolder(view){
         val textViewName = view.findViewById<TextView>(R.id.textViewName)
         val textViewEmail = view.findViewById<TextView>(R.id.textViewEmail)
+        val textViewPhone = view.findViewById<TextView>(R.id.textViewPhone)
+        val textViewZipcode = view.findViewById<TextView>(R.id.textViewZipcode)
+        val textViewCity = view.findViewById<TextView>(R.id.textViewCity)
         val imageViewStudent = view.findViewById<ImageView>(R.id.imageViewStudent)
     }
 
@@ -25,6 +28,10 @@ class StudentAdapter (private val students: ArrayList<Student>): RecyclerView.Ad
         val student = students.get(position)
         holder.textViewName.text=student.name
         holder.textViewEmail.text=student.email
+        holder.textViewPhone.text=student.phone
+        holder.textViewCity.text=student.city
+        holder.textViewZipcode.text=student.zipcode
+
         Picasso.get().load(student.imgUrl).into(holder.imageViewStudent)
     }
 

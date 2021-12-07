@@ -65,8 +65,10 @@ class StudentsActivity : BaseActivity() {
             val name =jsStudent.optString("name","")
             val email =jsStudent.optString("email","")
             val picture_url =jsStudent.optString("picture_url","")
-
-            val student = Student(name,email,picture_url)
+            val city =jsStudent.optString("city","")
+            val phone =jsStudent.optString("phone","")
+            val zipcode =jsStudent.optString("zipcode","")
+            val student = Student(name, email = email, imgUrl = picture_url, phone = phone, zipcode = zipcode, city = city)
             students.add(student)
             Log.d("Student",student.name)
         }
