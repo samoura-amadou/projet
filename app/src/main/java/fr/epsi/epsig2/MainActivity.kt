@@ -10,9 +10,9 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val buttonNature:Button = findViewById(R.id.buttonNature)
         val buttonSpace:Button = findViewById(R.id.buttonSpace)
+        (application as AppEpsi).showToast("Hello Epsi")
 
         buttonNature.setOnClickListener(View.OnClickListener {
             val newIntent= Intent(application,DetailActivity::class.java)
