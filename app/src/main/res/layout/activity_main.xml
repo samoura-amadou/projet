@@ -46,6 +46,12 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/txt_home_create" />
+            <Button
+                android:id="@+id/buttonStudents"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/txt_home_student" />
         </LinearLayout>
 
     </ScrollView>
