@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EpsiG2Test">
         <activity
+            android:name=".StudentsOnlineActivity"
+            android:exported="false" />
+        <activity
             android:name=".StudentsActivity"
             android:exported="false" />
         <activity

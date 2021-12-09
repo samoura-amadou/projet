@@ -15,6 +15,7 @@ class MainActivity : BaseActivity() {
         val buttonLogin:Button = findViewById(R.id.buttonLogin)
         val buttonCreate:Button = findViewById(R.id.buttonCreate)
         val buttonStudents:Button = findViewById(R.id.buttonStudents)
+        val buttonStudentsOnline:Button = findViewById(R.id.buttonStudentsOnline)
 
         (application as AppEpsi).showToast("Hello Epsi")
 
@@ -44,6 +45,11 @@ class MainActivity : BaseActivity() {
 
         buttonStudents.setOnClickListener(View.OnClickListener {
             val newIntent= Intent(application,StudentsActivity::class.java)
+            startActivity(newIntent)
+        })
+
+        buttonStudentsOnline.setOnClickListener(View.OnClickListener {
+            val newIntent= Intent(application,StudentsOnlineActivity::class.java)
             startActivity(newIntent)
         })
     }
